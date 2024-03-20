@@ -7,7 +7,6 @@ import Image from "next/image";
 import { toast } from "react-toastify";
 import MemberWorkspace from "@/app/_components/Memberworkspace";
 import { useSelector } from "react-redux";
-import { setWorkspaces } from "@/redux/features/workspaceslice";
 
 import profileIcon from "@/public/icons/userIcon.png";
 
@@ -27,7 +26,7 @@ export default function Settingworkspace({
     if (workspaceID !== 0) {
       getMembers();
     }
-  }, []);
+  }, [workspaceID]);
 
   const getMembers = async () => {
     const response = await fetch(
@@ -249,9 +248,10 @@ export default function Settingworkspace({
                 </th>
               </tr>
             </thead>
-            {members.map((item, index) => {
-              return <MemberWorkspace key={index} member={item} />;
-            })}
+            {members &&
+              members?.map((item, index) => {
+                return <MemberWorkspace key={index} member={item} />;
+              })}
           </table>
         </div>
       </div>
