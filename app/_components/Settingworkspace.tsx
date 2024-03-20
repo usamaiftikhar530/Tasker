@@ -27,7 +27,7 @@ export default function Settingworkspace({
     if (workspaceID !== 0) {
       getMembers();
     }
-  }, [workspaceID]);
+  }, []);
 
   const getMembers = async () => {
     const response = await fetch(
