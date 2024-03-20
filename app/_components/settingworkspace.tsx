@@ -5,7 +5,7 @@ import { ChangeEvent } from "react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 import { toast } from "react-toastify";
-import MemberWorkspace from "@/app/_components/memberworkspace";
+import MemberWorkspace from "@/app/_components/Memberworkspace";
 import { useSelector } from "react-redux";
 import { setWorkspaces } from "@/redux/features/workspaceslice";
 

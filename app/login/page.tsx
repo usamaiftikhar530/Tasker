@@ -1,7 +1,7 @@
 "use client";
 import React, { ChangeEvent } from "react";
 import { useState, useEffect } from "react";
-import Navbar from "../_components/navbar";
+import Navbar from "../_components/Navbar";
 import { toast } from "react-toastify";
 import { useRouter } from "next/navigation";
 

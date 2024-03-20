@@ -7,7 +7,7 @@ import membershipIcon from "@/public/icons/membershipIcon.png";
 import userIcon from "@/public/icons/userIcon2.png";
 import cancelIcon from "@/public/icons/cancelIcon.png";
 
-import BoardSection from "./boardsection";
+import BoardSection from "./Boardsection";
 
 interface AllBoards {
   board_id: number;

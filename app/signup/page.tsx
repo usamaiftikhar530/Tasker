@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { toast } from "react-toastify";
 // import "react-toastify/ReactToastify.css";
-import Navbar from "../_components/navbar";
+import Navbar from "../_components/Navbar";
 
 interface FormData {
   firstname: string;

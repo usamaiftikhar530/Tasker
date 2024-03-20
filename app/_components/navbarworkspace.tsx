@@ -3,7 +3,7 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useState, useEffect } from "react";
 import { toast } from "react-toastify";
-import InviteCard from "@/app/_components/invitecard";
+import InviteCard from "@/app/_components/Invitecard";
 
 import Logo from "@/components/logo";
 import hamburger from "@/public/icons/hamburger.png";

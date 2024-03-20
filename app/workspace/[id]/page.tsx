@@ -8,9 +8,9 @@ import { SidebarOpenClose } from "@/redux/features/sidebar-slice";
 import { toast } from "react-toastify";
 
 import plusIcon from "@/public/icons/plusIcon.png";
-import WorkspaceSection from "@/app/_components/workspacesection";
-import BoardsAll from "@/app/_components/boardsAll";
-import SettingWorkspace from "@/app/_components/settingworkspace";
+import WorkspaceSection from "@/app/_components/Workspacesection";
+import BoardsAll from "@/app/_components/BoardsAll";
+import SettingWorkspace from "@/app/_components/Settingworkspace";
 
 import cancelIcon from "@/public/icons/cancelIcon.png";
 import { useState, useEffect, ChangeEvent } from "react";

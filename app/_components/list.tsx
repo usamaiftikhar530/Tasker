@@ -3,7 +3,7 @@ import Image from "next/image";
 import React, { useEffect } from "react";
 import { ChangeEvent } from "react";
 import { useState } from "react";
-import Card from "@/app/_components/card";
+import Card from "@/app/_components/Card";
 import { Draggable, Droppable } from "@hello-pangea/dnd";
 import { toast } from "react-toastify";
 
