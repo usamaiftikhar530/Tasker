@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import React, { MouseEventHandler, useEffect } from "react";
+
 import { useState } from "react";
 import { Draggable, Droppable } from "@hello-pangea/dnd";
 import { ChangeEvent } from "react";
@@ -9,7 +10,7 @@ import { toast } from "react-toastify";
 import plusIcon from "@/public/icons/plusIcon.png";
 import crossIcon from "@/public/icons/cancelIcon.png";
 
-function addlist({
+function Addlist({
   addListIndex,
   createNewListFunc,
 }: {
@@ -109,4 +110,4 @@ function addlist({
   );
 }
 
-export default addlist;
+export default Addlist;
