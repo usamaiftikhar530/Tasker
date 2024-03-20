@@ -13,7 +13,7 @@ interface FormData {
   password: string;
 }
 
-function page() {
+function Page() {
   const router = useRouter();
   const [formData, setFormData] = useState<FormData>({
     firstname: "",
@@ -158,4 +158,4 @@ function page() {
   );
 }
 
-export default page;
+export default Page;

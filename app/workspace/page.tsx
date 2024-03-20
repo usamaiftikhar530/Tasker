@@ -3,7 +3,7 @@
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 
-function page() {
+function Page() {
   const router = useRouter();
 
   useEffect(() => {
@@ -34,4 +34,4 @@ function page() {
   );
 }
 
-export default page;
+export default Page;

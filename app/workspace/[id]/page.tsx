@@ -38,7 +38,7 @@ enum ViewType {
   Billing = "BILLING",
 }
 
-function page({ params }: { params: any }) {
+function Page({ params }: { params: any }) {
   const dispatch = useDispatch<AppDispatch>();
   const isSideBarOpen = useAppSelector(
     (state) => state.sidebarReducer.value.isSideBarOpen
@@ -290,4 +290,4 @@ function page({ params }: { params: any }) {
   );
 }
 
-export default page;
+export default Page;
