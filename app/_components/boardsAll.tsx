@@ -19,7 +19,7 @@ interface Props {
   workspaceName: string;
 }
 
-function boardsAll({ boards, workspaceId, workspaceName }: Props) {
+function BoardsAll({ boards, workspaceId, workspaceName }: Props) {
   const [createBoardPopup, setCreateBoardPopup] = useState(false);
   const [myBoards, setAllBoards] = useState<AllBoards[]>([
     { board_id: 0, board_name: "" },
@@ -157,4 +157,4 @@ function boardsAll({ boards, workspaceId, workspaceName }: Props) {
   );
 }
 
-export default boardsAll;
+export default BoardsAll;
