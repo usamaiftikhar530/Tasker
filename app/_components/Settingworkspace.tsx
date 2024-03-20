@@ -41,7 +41,7 @@ export default function Settingworkspace({
 
     const res = await response.json();
     if (res) {
-      setMembers(res);
+      // setMembers(res);
     }
   };
 
@@ -248,10 +248,10 @@ export default function Settingworkspace({
                 </th>
               </tr>
             </thead>
-            {members &&
+            {/* {members &&
               members?.map((item, index) => {
                 return <MemberWorkspace key={index} member={item} />;
-              })}
+              })} */}
           </table>
         </div>
       </div>
