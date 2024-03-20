@@ -6,9 +6,15 @@ import { toast } from "react-toastify";
 
 import bgImage from "@/public/backgrounds/backgroundOne.jpg";
 import Image from "next/image";
-import Navbar from "@/app/_components/Navbarworkspace";
-import List from "@/app/_components/List";
-import Addlist from "@/app/_components/Addlist";
+// import Navbar from "@/app/_components/Navbarworkspace";
+import Navbar from "../../_components/Navbarworkspace";
+
+// import List from "@/app/_components/List";
+import List from "../../_components/List";
+
+// import Addlist from "@/app/_components/Addlist";
+import Addlist from "../../_components/Addlist";
+
 import crossIcon from "@/public/icons/cancelIcon.png";
 import deleteIcon from "@/public/icons/deleteIcon.png";
 
