@@ -35,7 +35,7 @@ interface AllLists {
 let selectedCardID = 0;
 let selectedListID = 0;
 
-function page({ params }: { params: any }) {
+function Page({ params }: { params: any }) {
   let totalIndex = 0;
   const [allLists, setAllLists] = useState<AllLists[]>([]);
   const [cardPopup, setCardPopup] = useState(false);
@@ -467,4 +467,4 @@ function page({ params }: { params: any }) {
   );
 }
 
-export default page;
+export default Page;
