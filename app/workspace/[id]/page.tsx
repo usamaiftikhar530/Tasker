@@ -83,7 +83,7 @@ function Page({ params }: { params: any }) {
     dispatch(setWorkspaces(results));
 
     const currentWorkspace = results.find(
-      (item: AllWorkspaces) => item.workspace_id == params.id
+      (item: Workspace) => item.workspace_id == params.id
     );
 
     setCurrentWorkspace(currentWorkspace);
