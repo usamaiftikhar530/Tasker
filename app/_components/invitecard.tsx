@@ -6,7 +6,7 @@ interface InviteNotification {
   workspace_name: string;
 }
 
-function invitecard({
+function Invitecard({
   inviteNotification,
   onClickJoinFunc,
   onClickRejectFunc,
@@ -44,4 +44,4 @@ function invitecard({
   );
 }
 
-export default invitecard;
+export default Invitecard;

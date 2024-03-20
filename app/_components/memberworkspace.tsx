@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 
 interface WorkspaceMember {
   user_name: string;
@@ -6,10 +6,7 @@ interface WorkspaceMember {
   member_joined_date: Date;
 }
 
-function memberworkspace({ member }: { member: WorkspaceMember }) {
-  useEffect(() => {
-    console.log(member);
-  });
+function Memberworkspace({ member }: { member: WorkspaceMember }) {
   return (
     <tbody className="bg-white divide-y divide-gray-200">
       <tr>
@@ -27,4 +24,4 @@ function memberworkspace({ member }: { member: WorkspaceMember }) {
   );
 }
 
-export default memberworkspace;
+export default Memberworkspace;

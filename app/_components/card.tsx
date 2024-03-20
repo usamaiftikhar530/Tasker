@@ -4,7 +4,7 @@ import { Draggable } from "@hello-pangea/dnd";
 
 import Image from "next/image";
 
-function card({
+function Card({
   cardID,
   cardIndex,
   cardDescrption,
@@ -32,4 +32,4 @@ function card({
   );
 }
 
-export default card;
+export default Card;

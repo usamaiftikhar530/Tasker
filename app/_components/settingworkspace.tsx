@@ -11,7 +11,7 @@ import { setWorkspaces } from "@/redux/features/workspaceslice";
 
 import profileIcon from "@/public/icons/userIcon.png";
 
-export default function settingworkspace({
+export default function Settingworkspace({
   workspaceID,
 }: {
   workspaceID: number;

@@ -16,7 +16,7 @@ import { AppDispatch } from "@/redux/store";
 import { useSelector } from "react-redux";
 import { setWorkspaces } from "@/redux/features/workspaceslice";
 
-function navbarworkspace() {
+function Navbarworkspace() {
   const router = useRouter();
   const dispatch = useDispatch<AppDispatch>();
   const [userIconScreen, setUserIconScreen] = useState(false);
@@ -171,4 +171,4 @@ function navbarworkspace() {
   );
 }
 
-export default navbarworkspace;
+export default Navbarworkspace;

@@ -17,7 +17,7 @@ interface ListCards {
   card_order: number;
 }
 
-function list({
+function List({
   listId,
   listIndex,
   cards,
@@ -225,4 +225,4 @@ function list({
   );
 }
 
-export default list;
+export default List;

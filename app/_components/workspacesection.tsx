@@ -13,7 +13,7 @@ import activityIcon from "@/public/icons/activityIcon.png";
 import settingIcon from "@/public/icons/settingIcon.png";
 import billingIcon from "@/public/icons/billingIcon.png";
 
-function workspacesection({
+function Workspacesection({
   id,
   name,
   showProperties,
@@ -101,4 +101,4 @@ function workspacesection({
   );
 }
 
-export default workspacesection;
+export default Workspacesection;

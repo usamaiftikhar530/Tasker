@@ -3,7 +3,7 @@ import Image from "next/image";
 import backgroundOne from "@/public/backgrounds/backgroundOne.jpg";
 import { useRouter } from "next/navigation";
 
-function boardsection({ name, boardID }: { name: string; boardID: number }) {
+function Boardsection({ name, boardID }: { name: string; boardID: number }) {
   const router = useRouter();
   return (
     <div
@@ -20,4 +20,4 @@ function boardsection({ name, boardID }: { name: string; boardID: number }) {
   );
 }
 
-export default boardsection;
+export default Boardsection;
