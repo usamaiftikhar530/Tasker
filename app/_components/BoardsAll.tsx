@@ -20,21 +20,23 @@ interface Props {
 }
 
 function BoardsAll({ boards, workspaceId, workspaceName }: Props) {
-  const [usecreateBoardPopup, setCreateBoardPopup] = useState(false);
-  const [usemyBoards, setAllBoards] = useState<AllBoards[]>([
+  const [createBoardPopup, setCreateBoardPopup] = useState(false);
+  const [myBoards, setAllBoards] = useState<AllBoards[]>([
     { board_id: 0, board_name: "" },
   ]);
-  const [usenewBoardName, setNewBoardName] = useState("");
-  const [useboardsAmount, setBoardsAmount] = useState(0);
+  const [newBoardName, setNewBoardName] = useState("");
+  const [boardsAmount, setBoardsAmount] = useState(0);
 
   useEffect(() => {
+    console.log(myBoards);
+
     setAllBoards(boards);
     setBoardsAmount(boards.length);
   }, [boards]);
 
   useEffect(() => {
-    setBoardsAmount(usemyBoards.length);
-  }, [usemyBoards]);
+    setBoardsAmount(myBoards.length);
+  }, [myBoards]);
 
   const createNewBoard = async () => {
     const response = await fetch("/api/workspace/" + workspaceId, {
@@ -42,13 +44,13 @@ function BoardsAll({ boards, workspaceId, workspaceName }: Props) {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ usenewBoardName, workspaceId }),
+      body: JSON.stringify({ newBoardName, workspaceId }),
     });
 
     const res = await response.json();
 
     if (response.status == 201) {
-      setAllBoards([...usemyBoards, res]);
+      setAllBoards([...myBoards, res]);
 
       onClickCreateBoardPopup();
       toast.success("Congratulations! New Board Created ", {
@@ -62,7 +64,7 @@ function BoardsAll({ boards, workspaceId, workspaceName }: Props) {
   };
 
   const onClickCreateBoardPopup = () => {
-    if (useboardsAmount >= 5) {
+    if (boardsAmount >= 5) {
       toast.warning("Upgrade to Pro", {
         autoClose: 3000,
       });
@@ -70,7 +72,7 @@ function BoardsAll({ boards, workspaceId, workspaceName }: Props) {
     }
 
     setNewBoardName("");
-    setCreateBoardPopup(!usecreateBoardPopup);
+    setCreateBoardPopup(!createBoardPopup);
   };
 
   return (
@@ -98,7 +100,7 @@ function BoardsAll({ boards, workspaceId, workspaceName }: Props) {
 
       {/* Board Section */}
       <div className="mt-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        {usemyBoards.map((item) => {
+        {myBoards.map((item) => {
           return (
             <BoardSection
               key={item.board_id}
@@ -115,14 +117,14 @@ function BoardsAll({ boards, workspaceId, workspaceName }: Props) {
           <div className="absolute items-center justify-center flex flex-col">
             <p className="text-black font-semibold">Create new board</p>
             <p className="text-gray-700 font-medium">
-              {5 - useboardsAmount + " Remainings"}
+              {5 - boardsAmount + " Remainings"}
             </p>
           </div>
         </div>
       </div>
 
       {/* Create Board Popup */}
-      {usecreateBoardPopup && (
+      {createBoardPopup && (
         <div className="fixed w-full justify-center items-center flex z-20 top-0 bottom-0 left-0 right-0 m-auto bg-black/50">
           <div className="relative bg-white shadow-lg sm:px-4 px-4 py-3 rounded-lg flex flex-col gap-4 justify-center items-center border-slate-100 border-2">
             <p className="font-semibold">Create Board</p>
@@ -139,7 +141,7 @@ function BoardsAll({ boards, workspaceId, workspaceName }: Props) {
               type="text"
               name=""
               id=""
-              value={usenewBoardName}
+              value={newBoardName}
               onChange={(e) => {
                 setNewBoardName(e.target.value);
               }}
