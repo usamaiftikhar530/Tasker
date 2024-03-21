@@ -15,19 +15,20 @@ export async function GET(req: NextRequest) {
     // );
 
     const members = await sql.query(
-      "SELECT * FROM workspacemember w WHERE w.member_workspace = $1",
+      "SELECT * FROM workspacemember WHERE member_workspace = $1",
       [workspaceid]
     );
 
     const membersResult = members.rows;
     if (membersResult) {
       return NextResponse.json(membersResult, { status: 200 });
-    } else {
-      return NextResponse.json(
-        { message: "No Members Found" },
-        { status: 404 }
-      );
     }
+    //  else {
+    //   return NextResponse.json(
+    //     { message: "No Members Found" },
+    //     { status: 404 }
+    //   );
+    // }
   } catch (error) {
     return NextResponse.json(
       { message: "Failed To get Members" },
