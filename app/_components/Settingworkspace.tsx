@@ -21,14 +21,14 @@ export default function Settingworkspace({
   const [members, setMembers] = useState([]);
 
   const workspaces = useSelector((state: any) => state.workspace.workspaces);
+  if (workspaceID !== 0) {
+    getMembers();
+  }
+  // useEffect(() => {}, []);
 
-  useEffect(() => {
-    if (workspaceID !== 0) {
-      getMembers();
-    }
-  }, [workspaceID]);
+  var getMembers = async () => {
+    console.log("Get Members Client side log");
 
-  const getMembers = async () => {
     const response = await fetch(
       // "/api/member/workspace?workspaceid=" + workspaceID,
       "/api/member/workspace",
