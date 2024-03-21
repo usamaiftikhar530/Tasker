@@ -7,6 +7,8 @@ const compare = require("bcrypt");
 
 export async function POST(req: Request, res: NextResponse) {
   try {
+    console.log("Login Route Called");
+
     const body = await req.json();
     const { email, password } = body;
 
