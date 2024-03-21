@@ -33,7 +33,7 @@ export default function Settingworkspace({
 
     const response = await fetch(
       // "/api/member/workspace?workspaceid=" + workspaceID,
-      "/api/member/allmember",
+      "/api/member",
       {
         method: "GET",
         headers: {
