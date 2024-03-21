@@ -28,8 +28,6 @@ function BoardsAll({ boards, workspaceId, workspaceName }: Props) {
   const [boardsAmount, setBoardsAmount] = useState(0);
 
   useEffect(() => {
-    console.log(myBoards);
-
     setAllBoards(boards);
     setBoardsAmount(boards.length);
   }, [boards]);

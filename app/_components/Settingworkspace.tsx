@@ -40,7 +40,7 @@ export default function Settingworkspace({
     );
 
     const res = await response.json();
-    if (res) {
+    if (response.status == 200) {
       console.log(res);
 
       setMembers(res);
