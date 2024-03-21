@@ -21,12 +21,14 @@ export default function Settingworkspace({
   const [members, setMembers] = useState([]);
 
   const workspaces = useSelector((state: any) => state.workspace.workspaces);
-  if (workspaceID !== 0) {
-    getMembers();
-  }
-  // useEffect(() => {}, []);
 
-  var getMembers = async () => {
+  useEffect(() => {
+    if (workspaceID !== 0) {
+      getMembers();
+    }
+  });
+
+  const getMembers = async () => {
     console.log("Get Members Client side log");
 
     const response = await fetch(
@@ -251,12 +253,12 @@ export default function Settingworkspace({
                 </th>
               </tr>
             </thead>
-            {members &&
+            {/* {members &&
               members?.map((item, index) => {
                 console.log("Member Item in Loop " + item);
 
                 return <MemberWorkspace key={index} member={item} />;
-              })}
+              })} */}
           </table>
         </div>
       </div>
