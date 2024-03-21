@@ -9,8 +9,13 @@ export async function GET(req: NextRequest) {
     //   throw "Failed to Get Members";
     // }
 
+    // const members = await sql.query(
+    //   "SELECT w.*,u.user_name_first AS user_name FROM workspacemember w JOIN usertrello u ON w.member_user = u.user_id WHERE w.member_workspace = $1",
+    //   [workspaceid]
+    // );
+
     const members = await sql.query(
-      "SELECT w.*,u.user_name_first AS user_name FROM workspacemember w JOIN usertrello u ON w.member_user = u.user_id WHERE w.member_workspace = $1",
+      "SELECT w.* FROM workspacemember w WHERE w.member_workspace = $1",
       [workspaceid]
     );
 
