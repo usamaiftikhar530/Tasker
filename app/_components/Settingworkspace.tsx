@@ -24,7 +24,7 @@ export default function Settingworkspace({
 
   useEffect(() => {
     if (workspaceID !== 0) {
-      getMembers();
+      // getMembers();
     }
   });
 
@@ -47,6 +47,8 @@ export default function Settingworkspace({
       console.log(res);
 
       setMembers(res);
+    } else {
+      console.log(response.status);
     }
   };
 
@@ -160,6 +162,7 @@ export default function Settingworkspace({
 
   return (
     <div className="">
+      <button onClick={getMembers}>Get All Members</button>
       <h1 className="font-bold text-4xl">Settings</h1>
       <p className="text-slate-500 font-semibold my-2">
         Manage Workspace Setting
