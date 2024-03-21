@@ -15,7 +15,7 @@ export async function GET(req: NextRequest) {
     // );
 
     const members = await sql.query(
-      "SELECT w.* FROM workspacemember w WHERE w.member_workspace = $1",
+      "SELECT * FROM workspacemember w WHERE w.member_workspace = $1",
       [workspaceid]
     );
 
