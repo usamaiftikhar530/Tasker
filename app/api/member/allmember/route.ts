@@ -4,11 +4,7 @@ import { sql } from "@vercel/postgres";
 
 export async function GET(req: NextRequest) {
   try {
-    console.log("Member Route Called");
-
     const { workspaceid } = Object.fromEntries(req.nextUrl.searchParams);
-
-    console.log("Back Workspace ID " + workspaceid);
 
     if (!workspaceid) {
       throw "Failed to Get Members";
