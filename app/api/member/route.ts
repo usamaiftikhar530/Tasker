@@ -10,7 +10,7 @@ export async function GET(req: NextRequest) {
     // }
 
     const members = await sql.query(
-      "SELECT w.*,u.user_name_first AS user_name FROM workspacemember w JOIN usertrello u ON w.member_user = u.user_id WHERE member_workspace = $1",
+      "SELECT w.*,u.user_name_first AS user_name FROM workspacemember w JOIN usertrello u ON w.member_user = u.user_id WHERE w.member_workspace = $1",
       [workspaceid]
     );
 
