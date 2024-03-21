@@ -4,6 +4,8 @@ import { sql } from "@vercel/postgres";
 
 export async function GET(req: NextRequest) {
   try {
+    console.log("Member Workspace GET Called");
+
     const { workspaceid } = Object.fromEntries(req.nextUrl.searchParams);
 
     console.log("Back Workspace ID " + workspaceid);
